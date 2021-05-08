@@ -1,0 +1,20 @@
+1. How is web3 used in componentDidMount? How does the user connect to the blockchain network? This is metamask!
+
+In componentDidMount, the function initializes an instance of web3 and gets the user account through a web3 wallet,
+in this case metamask. The function then gets the smart contract ID and deploys it onto the web3 network which was 
+previously initialized, simultaneously connecting the smart contract to the user's web wallet.
+
+2. pick one function: fetchLoot, addLoot, or buyLoot and explain in detail what it is doing and how it works. Every line please!
+
+fetchLoot function:
+Line 58: Creates constant variables to input data from our smart contract.
+Line 59: Sets React state for the component as initializing.
+Line 61: Creates constant variable numTokens which calls the total supply of tokens in contract.
+Line 62-63: Creates 2 lists; one of available tokens, and one of owned tokens.
+Line 64: Create a for loop which iterates through each token in tokenList.
+Line 65-67: Creates 3 constant variables which get token object, along with owner info.
+Line 68-76: Takes data from token object and creates a dictionary of data for one token in tokenList.
+Line 77: If statement which checks if the token is owned by a user already, adds it to owned token list.
+Line 78: If statement which checks if the token is considered for sale, if so, then add to available token list.
+Line 80: Sets React state for the component which sets initializing to false and returns available and owned token lists back.
+

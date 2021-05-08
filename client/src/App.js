@@ -74,7 +74,7 @@ class App extends Component {
         tag: tags[token._ints[1]],
         type: merchTypes[token._ints[2]],
       }
-      if (owner == accounts[0]) owned.push(deciphered);
+      if (owner === accounts[0]) owned.push(deciphered);
       if (deciphered.forSale) available.push(deciphered);
     }
     this.setState({ initializing: false, available, owned });
